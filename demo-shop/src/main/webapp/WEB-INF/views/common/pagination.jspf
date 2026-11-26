@@ -1,0 +1,18 @@
+<c:if test="${totalPages > 1}">
+<ul class="pagination">
+    <c:url var="prevUrl" value="${basePath}">
+        <c:param name="keyword" value="${keyword}"/><c:param name="page" value="${currentPage - 1}"/>
+    </c:url>
+    <li class="${currentPage == 0 ? 'disabled' : ''}"><a href="${prevUrl}">&laquo;</a></li>
+    <c:forEach begin="0" end="${totalPages - 1}" var="i">
+        <c:url var="pageUrl" value="${basePath}">
+            <c:param name="keyword" value="${keyword}"/><c:param name="page" value="${i}"/>
+        </c:url>
+        <li class="${i == currentPage ? 'active' : ''}"><a href="${pageUrl}">${i + 1}</a></li>
+    </c:forEach>
+    <c:url var="nextUrl" value="${basePath}">
+        <c:param name="keyword" value="${keyword}"/><c:param name="page" value="${currentPage + 1}"/>
+    </c:url>
+    <li class="${currentPage >= totalPages - 1 ? 'disabled' : ''}"><a href="${nextUrl}">&raquo;</a></li>
+</ul>
+</c:if>

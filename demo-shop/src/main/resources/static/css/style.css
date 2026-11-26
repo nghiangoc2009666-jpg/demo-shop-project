@@ -1,0 +1,105 @@
+:root{
+  --primary:#4f46e5; --primary-dark:#4338ca; --bg:#f3f4f8; --card:#fff;
+  --text:#1f2937; --muted:#6b7280; --border:#e5e7eb;
+  --danger:#dc2626; --warn:#f59e0b; --ok:#16a34a;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);font-size:15px}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ===== Top bar ===== */
+.topbar{background:#111827;color:#fff;display:flex;align-items:center;gap:8px;padding:0 28px;height:60px;position:sticky;top:0;z-index:10;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.topbar .brand{font-weight:700;font-size:18px;color:#fff;margin-right:24px;display:flex;align-items:center;gap:8px}
+.topbar .brand i{background:var(--primary);border-radius:8px;width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;font-style:normal;font-size:15px}
+.topbar nav a{color:#cbd5e1;padding:8px 14px;border-radius:8px;font-weight:500}
+.topbar nav a:hover{background:#1f2937;color:#fff;text-decoration:none}
+.topbar .spacer{flex:1}
+.topbar .who{color:#cbd5e1;margin-right:12px}
+.topbar form{margin:0}
+
+main.app{max-width:1100px;margin:28px auto;padding:0 20px}
+
+/* ===== Buttons ===== */
+.btn{display:inline-block;border:0;border-radius:8px;padding:9px 16px;font-size:14px;font-weight:600;cursor:pointer;background:var(--primary);color:#fff;transition:.15s;font-family:inherit}
+.btn:hover{background:var(--primary-dark);text-decoration:none;color:#fff}
+.btn-sm{padding:5px 11px;font-size:13px}
+.btn-light{background:#fff;color:var(--text);border:1px solid var(--border)}
+.btn-light:hover{background:#f3f4f6;color:var(--text)}
+.btn-warn{background:var(--warn)} .btn-warn:hover{background:#d97706}
+.btn-danger{background:var(--danger)} .btn-danger:hover{background:#b91c1c}
+.btn-ghost{background:transparent;border:1px solid #475569;color:#e2e8f0}
+.btn-ghost:hover{background:#1f2937}
+.btn-block{width:100%;padding:12px;font-size:15px}
+
+/* ===== Cards / headings ===== */
+.card{background:var(--card);border-radius:14px;box-shadow:0 1px 3px rgba(0,0,0,.08);padding:24px}
+.page-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;gap:12px;flex-wrap:wrap}
+.page-head h1{margin:0;font-size:24px}
+.page-head .count{color:var(--muted);font-weight:400;font-size:16px}
+
+/* ===== Alerts ===== */
+.alert{padding:11px 14px;border-radius:10px;margin-bottom:16px;font-size:14px}
+.alert-ok{background:#dcfce7;color:#166534;border:1px solid #bbf7d0}
+.alert-err{background:#fee2e2;color:#991b1b;border:1px solid #fecaca}
+.alert-info{background:#e0e7ff;color:#3730a3;border:1px solid #c7d2fe}
+
+/* ===== Form ===== */
+.field{margin-bottom:16px}
+.field label{display:block;font-weight:600;margin-bottom:6px;font-size:14px}
+.input{width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-size:15px;background:#fff;font-family:inherit}
+.input:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(79,70,229,.15)}
+textarea.input{resize:vertical}
+.check{display:flex;align-items:center;gap:8px;margin-bottom:18px}
+.form-card{max-width:560px}
+.actions{display:flex;gap:8px}
+.hint{color:var(--muted);font-weight:400}
+
+/* ===== Search bar ===== */
+.searchbar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.searchbar .input{max-width:340px}
+
+/* ===== Table ===== */
+.table-wrap{background:#fff;border-radius:14px;box-shadow:0 1px 3px rgba(0,0,0,.08);overflow:hidden}
+table{width:100%;border-collapse:collapse}
+th{background:#f9fafb;text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);padding:12px 16px;border-bottom:1px solid var(--border)}
+td{padding:12px 16px;border-bottom:1px solid #f1f5f9;vertical-align:middle}
+tr:last-child td{border-bottom:0}
+tbody tr:hover{background:#fafafe}
+td.act{white-space:nowrap}
+td.act form{display:inline}
+.empty{text-align:center;color:var(--muted);padding:32px !important}
+
+/* ===== Badge ===== */
+.badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:600}
+.b-admin{background:#fee2e2;color:#b91c1c}
+.b-user{background:#e0e7ff;color:#3730a3}
+.b-on{background:#dcfce7;color:#166534}
+.b-off{background:#f3f4f6;color:#6b7280}
+
+/* ===== Pagination ===== */
+.pagination{display:flex;gap:6px;margin:20px 0 0;padding:0;list-style:none;justify-content:center}
+.pagination a{display:block;min-width:38px;text-align:center;padding:8px 12px;border:1px solid var(--border);background:#fff;border-radius:8px;color:var(--text);font-weight:600}
+.pagination a:hover{background:#eef2ff;text-decoration:none}
+.pagination .active a{background:var(--primary);color:#fff;border-color:var(--primary)}
+.pagination .disabled a{opacity:.4;pointer-events:none}
+
+/* ===== Home tiles ===== */
+.hero h1{margin:0 0 6px;font-size:26px}
+.hero p{color:var(--muted);margin:0 0 22px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.tile{display:block;background:#fff;border-radius:14px;padding:24px;box-shadow:0 1px 3px rgba(0,0,0,.08);color:var(--text);transition:.15s;border:1px solid transparent}
+.tile:hover{transform:translateY(-3px);border-color:var(--primary);text-decoration:none;box-shadow:0 8px 20px rgba(79,70,229,.15)}
+.tile .ic{font-size:30px}
+.tile h3{margin:10px 0 4px}
+.tile span{color:var(--muted);font-size:14px}
+
+/* ===== Login / Register ===== */
+body.guest{min-height:100vh;background:linear-gradient(135deg,#4f46e5 0%,#7c3aed 55%,#db2777 100%)}
+main.guest{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.auth-card{background:#fff;width:100%;max-width:420px;border-radius:18px;padding:36px 34px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.auth-card.wide{max-width:480px}
+.auth-logo{width:54px;height:54px;border-radius:14px;background:linear-gradient(135deg,#4f46e5,#7c3aed);display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 14px}
+.auth-card h1{text-align:center;margin:0 0 4px;font-size:24px}
+.auth-card .sub{text-align:center;color:var(--muted);margin:0 0 22px}
+.auth-card .switch{text-align:center;margin:20px 0 0;color:var(--muted)}
